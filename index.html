@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园食堂评分系统</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <h1>校园食堂评分系统</h1>
+            </div>
+            <p class="subtitle">为您的食堂体验打分，推动校园餐饮质量提升</p>
+        </header>
+
+        <main class="main-content">
+            <div class="form-section">
+                <div class="form-header">
+                    <h2><i class="fas fa-clipboard-list"></i> 学校食堂综合评分表 (百分制) - V2.0</h2>
+                    <p class="form-description">请根据您的实际体验，对食堂的各个方面进行评分</p>
+                </div>
+
+                <form id="canteenForm">
+                    <div class="basic-info">
+                        <div class="input-group">
+                            <label for="canteenName"><i class="fas fa-store"></i> 食堂名称：</label>
+                            <input type="text" id="canteenName" placeholder="请输入食堂名称" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="evaluationDate"><i class="fas fa-calendar-alt"></i> 评价日期：</label>
+                            <input type="date" id="evaluationDate" required>
+                        </div>
+                    </div>
+
+                    <!-- 第一部分：食品品质与安全 -->
+                    <section class="category-section">
+                        <div class="category-header">
+                            <h3><i class="fas fa-apple-alt"></i> 一、食品品质与安全 (权重：30分)</h3>
+                            <div class="category-score" id="category1Score">0/30</div>
+                        </div>
+                        
+                        <div class="question-group">
+                            <div class="question">
+                                <label>新鲜度 (10分)：食材是否新鲜，有无异味、变质现象</label>
+                                <div class="rating-slider">
+                                    <input type="range" min="0" max="10" value="5" class="slider" data-category="1" data-question="1">
+                                    <div class="slider-labels">
+                                        <span>极差</span>
+                                        <span class="slider-value">5</span>
+                                        <span>极佳</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <label>烹饪水平 (10分)：菜肴口味适中，火候得当</label>
+                                <div class="rating-slider">
+                                    <input type="range" min="0" max="10" value="5" class="slider" data-category="1" data-question="2">
+                                    <div class="slider-labels">
+                                        <span>难以下咽</span>
+                                        <span class="slider-value">5</span>
+                                        <span>美味可口</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <label>食品安全 (10分)：人员卫生、操作规范、明厨亮灶、留样制度</label>
+                                <div class="rating-slider">
+                                    <input type="range" min="0" max="10" value="5" class="slider" data-category="1" data-question="3">
+                                    <div class="slider-labels">
+                                        <span>令人担忧</span>
+                                        <span class="slider-value">5</span>
+                                        <span>非常放心</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 第二部分：价钱与性价比 -->
+                    <section class="category-section">
+                        <div class="category-header">
+                            <h3><i class="fas fa-money-bill-wave"></i> 二、价钱与性价比 (权重：15分)</h3>
+                            <div class="category-score" id="category2Score">0/15</div>
+                        </div>
+                        
+                        <div class="question-group">
+                            <div class="question">
+                                <label>定价合理性 (10分)：价格与校外相比是否有优势，有无分级套餐</label>
+                                <div class="rating-slider">
+                                    <input type="range" min="0" max="10" value="5" class="slider" data-category="2" data-question="1">
+                                    <div class="slider-labels">
+                                        <span>价格离谱</span>
+                                        <span class="slider-value">5</span>
+                                        <span>物超所值</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <label>分量充足性 (5分)：饭菜分量能否让大部分学生吃饱</label>
+                                <div class="rating-slider">
+                                    <input type="range" min="0" max="5" value="2" class="slider" data-category="2" data-question="2">
+                                    <div class="slider-labels">
+                                        <span>吃不饱</span>
+                                        <span class="slider-value">2</span>
+                                        <span>吃到撑</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 第三部分：多样性 & 营养搭配 -->
+                    <section class="category-section">
+                        <div class="category-header">
+                            <h3><i class="fas fa-seedling"></i> 三、多样性 & 营养搭配 (权重：15分)</h3>
+                            <div class="category-score" id="category3Score">0/15</div>
+                        </div>
+                        
+                        <div class="question-group">
+                            <div class="question">
+                                <label>菜品种类 (8分)：涵盖不同口味、菜系，定期更新</label>
+                                <div class="rating-slider">
+                                    <input type="range" min="0" max="8" value="4" class="slider" data-category="3" data-question="1">
+                                    <div class="slider-labels">
+                                        <span>单调乏味</span>
+                                        <span class="slider-value">4</span>
+                                        <span>丰富多样</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <label>营养均衡 (7分)：注重荤素搭配，提供健康选择及营养信息</label>
+                                <div class="rating-slider">
+                                    <input type="range" min="0" max="7" value="3" class="slider" data-category="3" data-question="2">
+                                    <div class="slider-labels">
+                                        <span>营养失衡</span>
+                                        <span class="slider-value">3</span>
+                                        <span>科学搭配</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 第四部分：环境与设施 -->
+                    <section class="category-section">
+                        <div class="category-header">
+                            <h3><i class="fas fa-building"></i> 四、环境与设施 (权重：10分)</h3>
+                            <div class="category-score" id="category4Score">0/10</div>
+                        </div>
+                        
+                        <div class="question-group">
+                            <div class="question">
+                                <label>清洁卫生 (5分)：就餐区、桌面、地面清洁</label>
+                                <div class="rating-slider">
+                                    <input type="range" min="0" max="5" value="2" class="slider" data-category="4" data-question="1">
+                                    <div class="slider-labels">
+                                        <span>脏乱差</span>
+                                        <span class="slider-value">2</span>
+                                        <span>一尘不染</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <label>舒适度 (5分)：灯光、通风、温度、桌椅完好度</label>
+                                <div class="rating-slider">
+                                    <input type="range" min="0" max="5" value="2" class="slider" data-category="4" data-question="2">
+                                    <div class="slider-labels">
+                                        <span>难以忍受</span>
+                                        <span class="slider-value">2</span>
+                                        <span>舒适宜人</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 第五部分：服务与运营 -->
+                    <section class="category-section">
+                        <div class="category-header">
+                            <h3><i class="fas fa-concierge-bell"></i> 五、服务与运营 (权重：15分)</h3>
+                            <div class="category-score" id="category5Score">0/15</div>
+                        </div>
+                        
+                        <div class="question-group">
+                            <div class="question">
+                                <label>供需与效率 (5分)：排队时间，补菜与售罄情况</label>
+                                <div class="rating-slider">
+                                    <input type="range" min="0" max="5" value="2" class="slider" data-category="5" data-question="1">
+                                    <div class="slider-labels">
+                                        <span>效率低下</span>
+                                        <span class="slider-value">2</span>
+                                        <span>高效便捷</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <label>秩序管理 (5分)：排队引导，插队管理</label>
+                                <div class="rating-slider">
+                                    <input type="range" min="0" max="5" value="2" class="slider" data-category="5" data-question="2">
+                                    <div class="slider-labels">
+                                        <span>混乱无序</span>
+                                        <span class="slider-value">2</span>
+                                        <span>井然有序</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <label>服务态度 (5分)：工作人员礼貌、耐心</label>
+                                <div class="rating-slider">
+                                    <input type="range" min="0" max="5" value="2" class="slider" data-category="5" data-question="3">
+                                    <div class="slider-labels">
+                                        <span>态度恶劣</span>
+                                        <span class="slider-value">2</span>
+                                        <span>热情周到</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 第六部分：制度与包容性 -->
+                    <section class="category-section">
+                        <div class="category-header">
+                            <h3><i class="fas fa-balance-scale"></i> 六、制度与包容性 (权重：15分)</h3>
+                            <div class="category-score" id="category6Score">0/15</div>
+                        </div>
+                        
+                        <div class="question-group">
+                            <div class="question">
+                                <label>分级性/平等性 (5分)：师生是否同餐同价，无不当特权</label>
+                                <div class="rating-slider">
+                                    <input type="range" min="0" max="5" value="2" class="slider" data-category="6" data-question="1">
+                                    <div class="slider-labels">
+                                        <span>区别对待</span>
+                                        <span class="slider-value">2</span>
+                                        <span>一视同仁</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <label>限制合理性 (5分)："禁止外带"等规定理由是否充分、执行是否人性化</label>
+                                <div class="rating-slider">
+                                    <input type="range" min="0" max="5" value="2" class="slider" data-category="6" data-question="2">
+                                    <div class="slider-labels">
+                                        <span>规定奇葩</span>
+                                        <span class="slider-value">2</span>
+                                        <span>合情合理</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="question">
+                                <label>特殊需求照顾 (5分)：是否有清真、素食选项，过敏源标识，支付便捷</label>
+                                <div class="rating-slider">
+                                    <input type="range" min="0" max="5" value="2" class="slider" data-category="6" data-question="3">
+                                    <div class="slider-labels">
+                                        <span>漠视需求</span>
+                                        <span class="slider-value">2</span>
+                                        <span>关怀备至</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 不合理规定扣分项 -->
+                        <div class="penalty-section">
+                            <h4><i class="fas fa-exclamation-triangle"></i> 【新增】不合理规定 (扣分项，最高扣10分)</h4>
+                            <p class="penalty-description">存在严重干扰正常就餐体验、缺乏合理理由的强制性规定</p>
+                            
+                            <div class="penalty-options">
+                                <div class="penalty-option">
+                                    <input type="checkbox" id="penalty1" value="3">
+                                    <label for="penalty1">强制站着吃饭 (-3分)</label>
+                                </div>
+                                <div class="penalty-option">
+                                    <input type="checkbox" id="penalty2" value="4">
+                                    <label for="penalty2">按班级分区限制就餐自由 (-4分)</label>
+                                </div>
+                                <div class="penalty-option">
+                                    <input type="checkbox" id="penalty3" value="5">
+                                    <label for="penalty3">规定极短的用餐时间（如少于15分钟） (-5分)</label>
+                                </div>
+                                <div class="penalty-option">
+                                    <input type="checkbox" id="penalty4" value="3">
+                                    <label for="penalty4">禁止使用手机等电子设备 (-3分)</label>
+                                </div>
+                                <div class="penalty-option">
+                                    <input type="checkbox" id="penalty5" value="4">
+                                    <label for="penalty5">强制购买指定套餐 (-4分)</label>
+                                </div>
+                            </div>
+                            <div class="penalty-total">
+                                <span>当前扣分：</span>
+                                <span id="penaltyScore">0</span>
+                                <span>分</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="form-actions">
+                        <button type="button" id="calculateBtn" class="btn btn-primary">
+                            <i class="fas fa-calculator"></i> 计算总分
+                        </button>
+                        <button type="reset" class="btn btn-secondary">
+                            <i class="fas fa-redo"></i> 重置问卷
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- 结果显示区域 -->
+            <div class="result-section" id="resultSection" style="display: none;">
+                <div class="result-header">
+                    <h2><i class="fas fa-chart-bar"></i> 评分结果</h2>
+                </div>
+                
+                <div class="result-content">
+                    <div class="result-summary">
+                        <div class="total-score">
+                            <div class="score-circle">
+                                <span id="finalScore">0</span>
+                                <span class="score-label">总分</span>
+                            </div>
+                            <div class="score-details">
+                                <h3 id="canteenResultName">食堂名称</h3>
+                                <p id="evaluationResultDate">评价日期</p>
+                                <div class="score-grade">
+                                    <span id="gradeText" class="grade-badge">等级</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="score-breakdown">
+                            <h4><i class="fas fa-chart-pie"></i> 各部分得分</h4>
+                            <div class="breakdown-list">
+                                <div class="breakdown-item">
+                                    <span>食品品质与安全</span>
+                                    <span id="breakdown1">0/30</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>价钱与性价比</span>
+                                    <span id="breakdown2">0/15</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>多样性 & 营养搭配</span>
+                                    <span id="breakdown3">0/15</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>环境与设施</span>
+                                    <span id="breakdown4">0/10</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>服务与运营</span>
+                                    <span id="breakdown5">0/15</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>制度与包容性</span>
+                                    <span id="breakdown6">0/15</span>
+                                </div>
+                                <div class="breakdown-item penalty-item">
+                                    <span>不合理规定扣分</span>
+                                    <span id="breakdownPenalty">-0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="result-evaluation">
+                        <h4><i class="fas fa-comment-dots"></i> 综合评价</h4>
+                        <div class="evaluation-text" id="evaluationText">
+                            <p>请完成问卷并点击"计算总分"按钮查看评价结果。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>© 2025 校园食堂评分系统 | 推动校园餐饮质量提升，共建美好校园生活</p>
+            <p class="footer-note">
+                <a href="standard.html"><i class="fas fa-clipboard-check"></i> 查看详细评分标准</a> |
+                注：本评分系统基于《学校食堂综合评分表 (百分制) - V2.0》标准制定
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

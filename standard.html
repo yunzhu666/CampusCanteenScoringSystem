@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>评分标准详情 - 学校食堂综合评分表 (百分制) - V2.0</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-clipboard-check"></i>
+                <h1>学校食堂综合评分表 (百分制) - V2.0</h1>
+            </div>
+            <p class="subtitle">详细评分标准与评估说明</p>
+        </header>
+
+        <main class="main-content">
+            <div class="standard-section">
+                <div class="standard-header">
+                    <h2><i class="fas fa-file-alt"></i> 评分标准详情</h2>
+                    <p class="standard-description">本评分表用于全面评估学校食堂的综合质量，采用百分制计分</p>
+                </div>
+
+                <div class="standard-content">
+                    <!-- 基本信息 -->
+                    <section class="standard-part">
+                        <h3><i class="fas fa-info-circle"></i> 基本信息</h3>
+                        <div class="standard-details">
+                            <p><strong>食堂名称：</strong> ______________</p>
+                            <p><strong>评价日期：</strong> ______________</p>
+                            <p><strong>总分：</strong> ______________ / 100</p>
+                        </div>
+                    </section>
+
+                    <!-- 第一部分：食品品质与安全 -->
+                    <section class="standard-part">
+                        <h3><i class="fas fa-apple-alt"></i> 一、食品品质与安全 (权重：30分)</h3>
+                        <div class="standard-details">
+                            <div class="criteria">
+                                <h4>新鲜度 (10分)</h4>
+                                <p>食材是否新鲜，有无异味、变质现象</p>
+                                <ul>
+                                    <li>10分：食材极其新鲜，无异味，无变质</li>
+                                    <li>7-9分：食材基本新鲜，偶尔有轻微问题</li>
+                                    <li>4-6分：食材新鲜度一般，有时有异味</li>
+                                    <li>1-3分：食材新鲜度差，常有变质现象</li>
+                                    <li>0分：食材严重变质，存在安全隐患</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="criteria">
+                                <h4>烹饪水平 (10分)</h4>
+                                <p>菜肴口味适中，火候得当</p>
+                                <ul>
+                                    <li>10分：口味极佳，火候完美，烹饪技艺高超</li>
+                                    <li>7-9分：口味良好，火候适当</li>
+                                    <li>4-6分：口味一般，火候有时不当</li>
+                                    <li>1-3分：口味差，经常过咸/过淡/过生/过熟</li>
+                                    <li>0分：无法下咽，烹饪严重失误</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="criteria">
+                                <h4>食品安全 (10分)</h4>
+                                <p>人员卫生、操作规范、明厨亮灶、留样制度</p>
+                                <ul>
+                                    <li>10分：完全符合食品安全标准，操作规范</li>
+                                    <li>7-9分：基本符合标准，偶尔有小问题</li>
+                                    <li>4-6分：存在一些卫生隐患</li>
+                                    <li>1-3分：卫生状况堪忧，操作不规范</li>
+                                    <li>0分：存在严重食品安全风险</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 第二部分：价钱与性价比 -->
+                    <section class="standard-part">
+                        <h3><i class="fas fa-money-bill-wave"></i> 二、价钱与性价比 (权重：15分)</h3>
+                        <div class="standard-details">
+                            <div class="criteria">
+                                <h4>定价合理性 (10分)</h4>
+                                <p>价格与校外相比是否有优势，有无分级套餐</p>
+                                <ul>
+                                    <li>10分：价格极具竞争力，有多种套餐选择</li>
+                                    <li>7-9分：价格合理，有分级套餐</li>
+                                    <li>4-6分：价格略高，套餐选择有限</li>
+                                    <li>1-3分：价格明显偏高，无套餐选择</li>
+                                    <li>0分：价格离谱，完全不合理</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="criteria">
+                                <h4>分量充足性 (5分)</h4>
+                                <p>饭菜分量能否让大部分学生吃饱</p>
+                                <ul>
+                                    <li>5分：分量非常充足，能满足所有学生</li>
+                                    <li>4分：分量充足，大部分学生能吃饱</li>
+                                    <li>3分：分量一般，部分学生需要加饭</li>
+                                    <li>1-2分：分量不足，经常需要加饭</li>
+                                    <li>0分：分量严重不足，无法吃饱</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 第三部分：多样性 & 营养搭配 -->
+                    <section class="standard-part">
+                        <h3><i class="fas fa-seedling"></i> 三、多样性 & 营养搭配 (权重：15分)</h3>
+                        <div class="standard-details">
+                            <div class="criteria">
+                                <h4>菜品种类 (8分)</h4>
+                                <p>涵盖不同口味、菜系，定期更新</p>
+                                <ul>
+                                    <li>8分：菜品种类极其丰富，定期更新</li>
+                                    <li>6-7分：种类较多，偶尔更新</li>
+                                    <li>4-5分：种类一般，更新频率低</li>
+                                    <li>2-3分：种类单一，很少更新</li>
+                                    <li>0-1分：种类极其单一，从不更新</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="criteria">
+                                <h4>营养均衡 (7分)</h4>
+                                <p>注重荤素搭配，提供健康选择及营养信息</p>
+                                <ul>
+                                    <li>7分：营养搭配科学，有健康选择和营养信息</li>
+                                    <li>5-6分：荤素搭配合理，有健康选择</li>
+                                    <li>3-4分：搭配一般，缺乏营养信息</li>
+                                    <li>1-2分：搭配不合理，无健康选择</li>
+                                    <li>0分：完全不注重营养搭配</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 第四部分：环境与设施 -->
+                    <section class="standard-part">
+                        <h3><i class="fas fa-building"></i> 四、环境与设施 (权重：10分)</h3>
+                        <div class="standard-details">
+                            <div class="criteria">
+                                <h4>清洁卫生 (5分)</h4>
+                                <p>就餐区、桌面、地面清洁</p>
+                                <ul>
+                                    <li>5分：一尘不染，非常干净</li>
+                                    <li>4分：干净整洁，偶尔有小问题</li>
+                                    <li>3分：基本干净，有时不够整洁</li>
+                                    <li>1-2分：脏乱，清洁不到位</li>
+                                    <li>0分：极其脏乱，影响就餐</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="criteria">
+                                <h4>舒适度 (5分)</h4>
+                                <p>灯光、通风、温度、桌椅完好度</p>
+                                <ul>
+                                    <li>5分：环境非常舒适，设施完好</li>
+                                    <li>4分：环境舒适，设施基本完好</li>
+                                    <li>3分：环境一般，设施有轻微问题</li>
+                                    <li>1-2分：环境不舒适，设施问题多</li>
+                                    <li>0分：环境恶劣，无法正常就餐</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 第五部分：服务与运营 -->
+                    <section class="standard-part">
+                        <h3><i class="fas fa-concierge-bell"></i> 五、服务与运营 (权重：15分)</h3>
+                        <div class="standard-details">
+                            <div class="criteria">
+                                <h4>供需与效率 (5分)</h4>
+                                <p>排队时间，补菜与售罄情况</p>
+                                <ul>
+                                    <li>5分：无需排队，供应充足</li>
+                                    <li>4分：排队时间短，补菜及时</li>
+                                    <li>3分：排队时间一般，偶尔售罄</li>
+                                    <li>1-2分：排队时间长，经常售罄</li>
+                                    <li>0分：效率极低，严重影响就餐</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="criteria">
+                                <h4>秩序管理 (5分)</h4>
+                                <p>排队引导，插队管理</p>
+                                <ul>
+                                    <li>5分：秩序井然，管理到位</li>
+                                    <li>4分：秩序良好，偶尔有插队</li>
+                                    <li>3分：秩序一般，管理不够</li>
+                                    <li>1-2分：秩序混乱，插队严重</li>
+                                    <li>0分：完全无序，无人管理</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="criteria">
+                                <h4>服务态度 (5分)</h4>
+                                <p>工作人员礼貌、耐心</p>
+                                <ul>
+                                    <li>5分：服务热情周到，态度极好</li>
+                                    <li>4分：服务态度良好</li>
+                                    <li>3分：服务态度一般</li>
+                                    <li>1-2分：服务态度差，不耐烦</li>
+                                    <li>0分：态度恶劣，冲突频发</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 第六部分：制度与包容性 -->
+                    <section class="standard-part">
+                        <h3><i class="fas fa-balance-scale"></i> 六、制度与包容性 (权重：15分)</h3>
+                        <div class="standard-details">
+                            <div class="criteria">
+                                <h4>分级性/平等性 (5分)</h4>
+                                <p>师生是否同餐同价，无不当特权</p>
+                                <ul>
+                                    <li>5分：完全平等，无特权现象</li>
+                                    <li>4分：基本平等，偶尔有小问题</li>
+                                    <li>3分：有一定区别对待</li>
+                                    <li>1-2分：明显区别对待</li>
+                                    <li>0分：严重特权现象</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="criteria">
+                                <h4>限制合理性 (5分)</h4>
+                                <p>"禁止外带"等规定理由是否充分、执行是否人性化</p>
+                                <ul>
+                                    <li>5分：规定合理，执行人性化</li>
+                                    <li>4分：规定基本合理</li>
+                                    <li>3分：规定有一定不合理性</li>
+                                    <li>1-2分：规定不合理，执行僵化</li>
+                                    <li>0分：规定极其不合理</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="criteria">
+                                <h4>特殊需求照顾 (5分)</h4>
+                                <p>是否有清真、素食选项，过敏源标识，支付便捷</p>
+                                <ul>
+                                    <li>5分：全面照顾特殊需求，支付便捷</li>
+                                    <li>4分：有较多特殊需求选项</li>
+                                    <li>3分：有基本特殊需求选项</li>
+                                    <li>1-2分：特殊需求照顾不足</li>
+                                    <li>0分：完全不照顾特殊需求</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 扣分项 -->
+                    <section class="standard-part penalty-part">
+                        <h3><i class="fas fa-exclamation-triangle"></i> 【新增】不合理规定 (扣分项，最高扣10分)</h3>
+                        <div class="standard-details">
+                            <p>存在严重干扰正常就餐体验、缺乏合理理由的强制性规定。</p>
+                            <p><strong>例如：</strong></p>
+                            <ul>
+                                <li>强制站着吃饭</li>
+                                <li>按班级分区限制就餐自由</li>
+                                <li>规定极短的用餐时间（如少于15分钟）</li>
+                                <li>禁止使用手机等电子设备</li>
+                                <li>强制购买指定套餐</li>
+                            </ul>
+                            <p><strong>扣分细则：</strong> 根据规定的严苛程度和对学生的影响面，每项不合理规定扣 3-5分，本项扣分直接从 第六部分得分 中扣除，且可能导致该部分得分为负，并影响总分。</p>
+                        </div>
+                    </section>
+
+                    <!-- 总分计算与等级参考 -->
+                    <section class="standard-part">
+                        <h3><i class="fas fa-calculator"></i> 总分计算与等级参考</h3>
+                        <div class="standard-details">
+                            <h4>计算方式</h4>
+                            <p>前五部分按权重计分，第六部分在计算基础分后，减去"不合理规定"的扣分，得到最终得分。总分为各部分之和。</p>
+                            
+                            <h4>评分等级</h4>
+                            <div class="grade-levels">
+                                <div class="grade-level excellent">
+                                    <span class="grade-range">90-100分</span>
+                                    <span class="grade-name">卓越食堂</span>
+                                </div>
+                                <div class="grade-level good">
+                                    <span class="grade-range">80-89分</span>
+                                    <span class="grade-name">优秀食堂</span>
+                                </div>
+                                <div class="grade-level average">
+                                    <span class="grade-range">70-79分</span>
+                                    <span class="grade-name">达标食堂</span>
+                                </div>
+                                <div class="grade-level poor">
+                                    <span class="grade-range">60-69分</span>
+                                    <span class="grade-name">待改进食堂</span>
+                                </div>
+                                <div class="grade-level fail">
+                                    <span class="grade-range">60分以下</span>
+                                    <span class="grade-name">不合格食堂</span>
+                                </div>
+                            </div>
+                            
+                            <p class="note"><strong>特别注意：</strong> 若因"不合理规定"导致总分骤降，即使食品尚可，也属严重运营缺陷。</p>
+                        </div>
+                    </section>
+
+                    <!-- 评估报告建议模板 -->
+                    <section class="standard-part">
+                        <h3><i class="fas fa-file-medical-alt"></i> 评估报告建议模板</h3>
+                        <div class="standard-details">
+                            <p>在最终的报告建议中，可以这样强调此问题：</p>
+                            
+                            <div class="report-template">
+                                <h4>【亟待整改的突出问题】</h4>
+                                <p>本次评估发现，食堂存在 "强制站立就餐" 的规定。此规定严重影响了用餐者的生理舒适与心理尊严，缺乏必要性和人性化考量，引发了师生的普遍反感。</p>
+                                <p><strong>建议：</strong> 立即废除该规定，确保所有师生拥有坐着就餐的基本权利。食堂管理应秉持服务初衷，任何规定的制定都应以提升就餐体验、保障健康为前提。</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="standard-actions">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i> 返回评分系统
+                    </a>
+                    <button onclick="window.print()" class="btn btn-secondary">
+                        <i class="fas fa-print"></i> 打印标准
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>© 2025 校园食堂评分系统 | 推动校园餐饮质量提升，共建美好校园生活</p>
+            <p class="footer-note">
+                <a href="index.html"><i class="fas fa-utensils"></i> 返回评分系统</a> | 
+                <a href="standard.html"><i class="fas fa-clipboard-check"></i> 查看评分标准</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // 添加打印样式
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为等级添加颜色类
+            const gradeLevels = document.querySelectorAll('.grade-level');
+            gradeLevels.forEach(level => {
+                if (level.classList.contains('excellent')) {
+                    level.style.background = 'linear-gradient(135deg, #48bb78, #38a169)';
+                } else if (level.classList.contains('good')) {
+                    level.style.background = 'linear-gradient(135deg, #4299e1, #3182ce)';
+                    level.style.color = 'white';
+                } else if (level.classList.contains('average')) {
+                    level.style.background = 'linear-gradient(135deg, #ecc94b, #d69e2e)';
+                    level.style.color = 'white';
+                } else if (level.classList.contains('poor')) {
+                    level.style.background = 'linear-gradient(135deg, #ed8936, #dd6b20)';
+                    level.style.color = 'white';
+                } else if (level.classList.contains('fail')) {
+                    level.style.background = 'linear-gradient(135deg, #e53e3e, #c53030)';
+                    level.style.color = 'white';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
